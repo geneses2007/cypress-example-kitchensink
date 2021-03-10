@@ -34,8 +34,9 @@
 //    docker logs blue-ocean
 
 pipeline {
-  label 'master'
   agent {
+    label 'master'
+    
     // this image provides everything needed to run Cypress
     docker {
       image 'cypress/base:10'
